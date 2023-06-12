@@ -3,8 +3,8 @@ import Box from '@mui/material/Box';
 
 export default function CircularIndeterminate() {
   return (
-    <Box className="flex">
-      <CircularProgress />
+    <Box className="h-screen flex items-center justify-center">
+      <CircularProgress  />
     </Box>
   );
 }

@@ -1,51 +1,61 @@
 'use client';
 import React from 'react';
 import Background from '../public/Meteor.svg'
-import Load from './Progress'
 import SideBar from './SideBar'
 import Typography from '@mui/material/Typography';
 import CV from '../public/CV.svg';
-import '@fontsource/roboto/300.css'
 import Project from './Project';
+import '@fontsource/roboto/300.css'
 import Experience from './Experience'
 import 'hover.css/css/hover-min.css';
+import { IconDefinition, faReact } from '@fortawesome/free-brands-svg-icons';
+import { faJava, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 
-export default function (){ 
+
+
+export default function MainPage (){ 
+
+  var iconsOne:IconDefinition[]=[faJava, faCss3Alt]
+  var iconsTwo:IconDefinition[]=[faJava, faCss3Alt]
+
   return(
-    <div className='grid grid-cols-8 grid-rows-1 bg-no-repeat bg-cover bg-center '> 
-       <div className="bg-slate-100 opacity-60 col-start-1 col-end-2 row-start-1 row-end-2 fixed">
-        <SideBar />
-      </div>
-      <div className='bg-slate-800 md:col-start-2  md:col-end-9 flex flex-col sm:col-start-3 sm:col-end-9 col-start-4 col-end-9'>
+    <div className='flex'> 
+    <div className='bg-slate-100 opacity-60 sticky top-0 h-screen w-3/5'>
+      <SideBar/>
+    </div>
+       
+      <div className='bg-slate-800 flex flex-col'>
         <About 
-        name="Karo Faraidoun Mahmoud"
         description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
         imageURL="pb.png"/>
         
-        <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">Course work</Typography>
+        <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8 ">Course projects</Typography>
+      <Project
+      title="Title"
+      description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
+      bgImage="TAS1.png"
+      icons={iconsOne}
+      mysql={true}
+      />
+
+    
+      <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">My projects</Typography>
       <Project
       title="Title"
       time="Time"
       description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
-      bgImage="/wemakeit3d.png"
+      bgImage="/TAS2.png"
+      icons={iconsTwo}
+      mysql={false}
       />
 
-    
-      <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">Work experience</Typography>
-      <Experience
+<Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">Work experience</Typography>
+      
+     <Experience
       imageURL='/mentor.png'
       description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
 
         />
-
-<Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">My projects</Typography>
-      <Project
-      title="Title"
-      time="Time"
-      description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
-      bgImage="/wemakeit3d.png"
-      />
-     
      </div>
      
     </div>
@@ -58,14 +68,14 @@ function About(props:any){
       link: 'https://github.com/karofmah',
       imgSrc: 'github.png',
       text: 'Github',
-      dimensions: 'w-10 h-10 hover:scale-125'
+      dimensions: 'w-10 h-10 hover:scale-125 duration-200'
 
     },
     {
       link: 'mailto:karo.f.mahmoud@gmail.com',
       imgSrc: '/Email.png',
       text: 'karo.f.mahmoud@gmail.com',
-      dimensions: 'w-8 h-8 hover:scale-125'
+      dimensions: 'w-8 h-8 hover:scale-125 duration-200'
 
 
     },
@@ -74,28 +84,28 @@ function About(props:any){
       link: 'MinCV.pdf',
       imgSrc: 'CV.png' ,
       text: 'CV',
-      dimensions: 'w-8 h-8 hover:scale-125'
+      dimensions: 'w-8 h-8 hover:scale-125 duration-200'
 
     },
     {
       link: 'https://www.linkedin.com/in/karo-mahmoud-933875248/',
       imgSrc: 'linkedin.png',
       text: 'Linkedin',
-      dimensions: 'w-8 h-8 hover:scale-125'
+      dimensions: 'w-8 h-8 hover:scale-125 duration-200'
 
     },
     {
       link: 'tel:+4746918226',
       imgSrc: 'phone.png',
       text: '+47 469 18 226',
-      dimensions: 'w-8 h-8 hover:scale-125'
+      dimensions: 'w-8 h-8 hover:scale-125 duration-200'
 
     },
     {
       link: 'https://goo.gl/maps/WCGDxMcvAadhjVfi9',
       imgSrc: 'Map.png',
       text: 'Norge, Trondheim Singsakerbakken 4F, 7030',
-      dimensions: 'w-8 h-8 hover:scale-125'
+      dimensions: 'w-8 h-8 hover:scale-125 duration-200'
 
     }
   ];
@@ -105,7 +115,7 @@ function About(props:any){
     <div className="flex flex-col lg:flex-row border-b w-11/12 border-white pb-12 ml-8">
 
       <div className="flex flex-col ">
-        <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4">{props.name}</Typography>
+        <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4">About me</Typography>
       <div className="flex lg:w-xl lg:h-72  "> 
       <Typography className="text-xs lg:text-md md:text-sm sm:text-sm xs:text-xs xl:text-lg 2xl:text-xl">{props.description}</Typography>
       </div>
