@@ -13,7 +13,7 @@ export default function Project(props:any){
     return(
     <div className="bg-no-repeat bg-cover bg-center h-screen mt-16" style={{backgroundImage: `url(${props.bgImage})`}}>
  <div
-      className={`flex flex-col rounded-xl bg-white lg:w-96 md:w-96 w-64 absolute right-0 h-40 overflow-hidden duration-200 text-h mr-16 mt-12 bg-gradient-to-r from-blue-900 to-cyan-400 opacity-95 ${
+      className={`flex flex-col rounded-xl bg-white lg:w-96 md:w-96 w-64 absolute right-0 h-40 overflow-hidden duration-200 text-h mr-16 mt-12 bg-gradient-to-br from-blue-900 to-cyan-400 opacity-95 ${
         isHovered ? 'hover:h-4/5' : ''
       }`}
       onMouseEnter={() => setIsHovered(true)}
@@ -30,7 +30,7 @@ export default function Project(props:any){
     <img src="/mysql.png" alt="mysql" className="h-16 w-24" />
   )}
   </div>
-  {!isHovered && <KeyboardArrowDownIcon className="self-center" />}
+  {!isHovered && <KeyboardArrowDownIcon className="self-center animate-bounce"/>}
       <p className='m-4 italic text-xs lg:text-lg md:text-md sm:text-sm xs:text-xs xl:text-xl 2xl:text-2xl'> {props.time} </p>
       <Typography className="m-4 text-xs lg:text-md md:text-sm sm:text-sm xs:text-xs xl:text-lg 2xl:text-xl">{props.description}</Typography>
      </div>

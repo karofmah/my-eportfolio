@@ -39,6 +39,8 @@ module.exports = {
       blue:colors.blue,
       orange:colors.orange,
       cyan:colors.cyan,
+      purple:colors.purple,
+
     },
     extend: {
       backgroundImage: {

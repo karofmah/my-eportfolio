@@ -10,7 +10,7 @@ import Experience from './Experience'
 import 'hover.css/css/hover-min.css';
 import { IconDefinition, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faJava, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
-
+import ContactForm from './ContactForm';
 
 
 export default function MainPage (){ 
@@ -20,7 +20,7 @@ export default function MainPage (){
 
   return(
     <div className='flex'> 
-    <div className='bg-slate-100 opacity-60 sticky top-0 h-screen w-3/5'>
+    <div className='bg-gradient-to-b from-slate-100 to-slate-400 opacity-60 sticky top-0 h-screen w-3/5'>
       <SideBar/>
     </div>
        
@@ -56,11 +56,17 @@ export default function MainPage (){
       description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
 
         />
+      <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">Contact me</Typography>
+     <ContactForm/>
      </div>
      
     </div>
     )
 }
+
+
+  
+
 
 function About(props:any){ 
   const listItems = [
