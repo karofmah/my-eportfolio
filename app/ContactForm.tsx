@@ -48,12 +48,9 @@ export default function ContactForm(props:any){
         form.current!, 
         'wX_64WmWGLc7q9r6B')
       .then((result:any) => {
-          console.log(result.text);
-          console.log("message sent")
           setOpenSuccess(true);
           e.target.reset
       }, (error:any) => {
-          console.log(error.text);
           setOpenError(true);
 
       });

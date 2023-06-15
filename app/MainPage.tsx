@@ -1,7 +1,6 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Background from '../public/Meteor.svg'
-import SideBar from './SideBar'
 import Typography from '@mui/material/Typography';
 import CV from '../public/CV.svg';
 import Project from './Project';
@@ -11,25 +10,62 @@ import 'hover.css/css/hover-min.css';
 import { IconDefinition, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faJava, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import ContactForm from './ContactForm';
+import SideBar from './SideBar'
+import {useRef} from 'react'
 
+
+ 
 
 export default function MainPage (){ 
 
   var iconsOne:IconDefinition[]=[faJava, faCss3Alt]
   var iconsTwo:IconDefinition[]=[faJava, faCss3Alt]
 
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const courseRef = useRef<HTMLDivElement>(null);
+  const myRef = useRef<HTMLDivElement>(null);
+  const workRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
+
+  var refs:any []=[aboutRef,courseRef, myRef,workRef,contactRef]
+
+  const [scrollTop, setScrollTop] = useState<number>(0);
+
+  useEffect(() => {
+    const handleScroll = (event: any) => {
+      setScrollTop(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+
+    };
+  }, []);
+
   return(
-    <div className='flex'> 
-    <div className='bg-gradient-to-b from-slate-100 to-slate-400 opacity-60 sticky top-0 h-screen w-3/5'>
-      <SideBar/>
+    <div className='flex '> 
+    <div className='bg-gradient-to-b from-slate-100 to-slate-400 opacity-60 sticky top-0 h-screen w-3/5'
+    
+    >
+      <SideBar 
+      tabRefs={refs}
+      valueY={scrollTop}
+      />
     </div>
        
-      <div className='bg-slate-800 flex flex-col'>
+      <div ref={aboutRef} className='bg-slate-800 flex flex-col' >
+
         <About 
         description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
-        imageURL="pb.png"/>
+        imageURL="pb.png"
         
-        <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8 ">Course projects</Typography>
+       />
+        <div ref={courseRef}>
+
+        <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8 " >Course projects</Typography>
       <Project
       title="Title"
       description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
@@ -37,9 +73,11 @@ export default function MainPage (){
       icons={iconsOne}
       mysql={true}
       />
+      </div>
+      <div ref={myRef}>
 
-    
-      <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">My projects</Typography>
+
+      <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8" >My projects</Typography>
       <Project
       title="Title"
       time="Time"
@@ -48,17 +86,30 @@ export default function MainPage (){
       icons={iconsTwo}
       mysql={false}
       />
+      </div>
 
-<Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">Work experience</Typography>
+
+    <div ref={workRef}>
+    <h2>{scrollTop}</h2>
+
+      <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">Work experience</Typography>
       
      <Experience
       imageURL='/mentor.png'
       description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
 
         />
-      <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">Contact me</Typography>
+        </div>
+        
+      
+      <div ref={contactRef}>
+
+      <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8" >Contact me</Typography>
      <ContactForm/>
      </div>
+
+     </div>
+
      
     </div>
     )
