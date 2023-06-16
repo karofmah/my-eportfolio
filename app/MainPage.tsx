@@ -30,6 +30,8 @@ export default function MainPage (){
 
   var refs:any []=[aboutRef,courseRef, myRef,workRef,contactRef]
 
+  const images:string[]=['TAS1.png','TAS2.png','TAS3.png']
+
   const [scrollTop, setScrollTop] = useState<number>(0);
 
   useEffect(() => {
@@ -72,6 +74,7 @@ export default function MainPage (){
       bgImage="TAS1.png"
       icons={iconsOne}
       mysql={true}
+      images={images}
       />
       </div>
       <div ref={myRef}>
@@ -85,12 +88,12 @@ export default function MainPage (){
       bgImage="/TAS2.png"
       icons={iconsTwo}
       mysql={false}
+      images={images}
       />
       </div>
 
 
     <div ref={workRef}>
-    <h2>{scrollTop}</h2>
 
       <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">Work experience</Typography>
       
