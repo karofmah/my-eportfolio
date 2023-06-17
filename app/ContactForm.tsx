@@ -5,7 +5,7 @@ import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
-
+import LinearIndeterminate from './LinearProgress';
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
   props,
   ref,
@@ -17,8 +17,10 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 
 export default function ContactForm(props:any){
     const form = useRef<HTMLFormElement>(null);
-    const [openSuccess, setOpenSuccess] = useState(false);
-    const [openError, setOpenError] = useState(false);
+    const [openSuccess, setOpenSuccess] = useState<boolean>(false);
+    const [openError, setOpenError] = useState<boolean>(false);
+    const [isSending, setIsSending] = useState<boolean>(false);
+
 
     const handleCloseSuccess = (event?: React.SyntheticEvent | Event, reason?: string) => {
     
@@ -40,7 +42,7 @@ export default function ContactForm(props:any){
     };
   const sendEmail = (e:any) => {
     e.preventDefault();
-
+    setIsSending(true)
     emailjs
     .sendForm(
         'service_m0phs9o', 
@@ -49,17 +51,19 @@ export default function ContactForm(props:any){
         'wX_64WmWGLc7q9r6B')
       .then((result:any) => {
           setOpenSuccess(true);
-          e.target.reset
+          setIsSending(false)
+          e.target.reset()
       }, (error:any) => {
           setOpenError(true);
+          setIsSending(false)
 
       });
   };
     return(
-      <div className="flex justify-center">
+      <div className="flex justify-center ">
 
-        <form ref={form} onSubmit={sendEmail} className="flex flex-col self-center w-2/5 bg-gradient-to-r from-slate-400 to-white rounded-xl mb-14 self-center">
-      <div className="flex">
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col self-center md:w-2/5 w-4/5 bg-gradient-to-r from-slate-400 to-white rounded-t-xl mb-14 self-center">
+      <div className="flex flex-col">
        
       
       <TextField
@@ -94,9 +98,17 @@ export default function ContactForm(props:any){
           rows={4}
           
         />
+        <div className="flex flex-col ">
         <Button type="submit" value="Send"  variant="contained" endIcon={<SendIcon />}>
           Send
           </Button>
+          {isSending && <LinearIndeterminate/>
+}
+
+        </div>
+      
+        
+
 
     </form>
 
@@ -113,6 +125,10 @@ export default function ContactForm(props:any){
     Message could not be sent
   </Alert>
 </Snackbar>
+
+
+
+
 
     </div>
 

@@ -48,8 +48,8 @@ export default function MainPage (){
   }, []);
 
   return(
-    <div className='flex '> 
-    <div className='bg-gradient-to-b from-slate-100 to-slate-400 opacity-60 sticky top-0 h-screen w-3/5'
+    <div className='flex m-0'> 
+    <div className='bg-gradient-to-b from-slate-100 to-slate-400 opacity-60 sticky top-0 h-screen xs:h-screen w-3/5'
     
     >
       <SideBar 
@@ -176,18 +176,18 @@ function About(props:any){
 
       <div className="flex flex-col ">
         <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4">About me</Typography>
-      <div className="flex lg:w-xl lg:h-72  "> 
-      <Typography className="text-xs lg:text-md md:text-sm sm:text-sm xs:text-xs xl:text-lg 2xl:text-xl">{props.description}</Typography>
+      <div className="flex lg:w-xl lg:h-72 lg:mb-0 mb-8"> 
+      <Typography className="text-xs lg:text-md md:text-sm sm:text-sm xs:text-xs xl:text-lg 2xl:text-xl ">{props.description}</Typography>
       </div>
 
-      <div className="bg-slate-100 text-black rounded-3xl opacity-60 w-3/4 ">
-      <ul className="flex flex-col mt-4 ">
+      <div className="bg-slate-100 text-black rounded-3xl opacity-60 w-3/4">
+      <ul className="flex flex-col lg:mt-4 mt-10">
 
 {listItems.map((item, index) => (
-    <li key={index} className='mb-6 ml-6'>
+    <li key={index} className='mb-6 ml-6 ' >
       <a href={item.link} className="flex">
         <img src={item.imgSrc} alt="" className={item.dimensions} />
-        <Typography className='mt-1 ml-2 hvr-underline-from-left '>{item.text}</Typography>
+        <Typography className='mt-1 ml-2 hvr-underline-from-left text-xs break-all'>{item.text}</Typography>
       </a>
     </li>
   ))}
