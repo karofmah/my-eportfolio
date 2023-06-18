@@ -35,30 +35,25 @@ export default function SideBar(props:any) {
     
       if(props.valueY<775){
         setValue(0)
-        console.log(0)
       }
        
       else if(props.valueY<1920){
         setValue(1)
-        console.log(1)
       }
        
 
       else if(props.valueY<2500){
         setValue(2)
-        console.log(2)
       }
         
 
       else if(props.valueY<2650){
         setValue(3)
-        console.log(3)
       }
         
 
       else{
         setValue(4)
-        console.log(4)
       }
 
 
@@ -69,7 +64,7 @@ export default function SideBar(props:any) {
     
     
       <Tabs
-        className="mt-12 br-1"
+        className="mt-12 br-1 "
         orientation="vertical"
         value={value}
         onChange={handleChange}

@@ -48,8 +48,8 @@ export default function MainPage (){
   }, []);
 
   return(
-    <div className='flex m-0'> 
-    <div className='bg-gradient-to-b from-slate-100 to-slate-400 opacity-60 sticky top-0 h-screen xs:h-screen w-3/5'
+    <div className='flex min-h-screen'> 
+    <div className='bg-gradient-to-b from-slate-100 to-slate-400 opacity-60 sticky top-0 h-screen w-3/5'
     
     >
       <SideBar 
@@ -61,9 +61,8 @@ export default function MainPage (){
       <div ref={aboutRef} className='bg-slate-800 flex flex-col' >
 
         <About 
-        description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
+        description=""
         imageURL="pb.png"
-        
        />
         <div ref={courseRef}>
 
@@ -75,6 +74,7 @@ export default function MainPage (){
       icons={iconsOne}
       mysql={true}
       images={images}
+      height="h-96"
       />
       </div>
       <div ref={myRef}>
@@ -89,6 +89,8 @@ export default function MainPage (){
       icons={iconsTwo}
       mysql={false}
       images={images}
+      iconsHeight="h-4/5"
+      totalHeight="h-40"
       />
       </div>
 
