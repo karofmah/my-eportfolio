@@ -7,30 +7,33 @@ import Project from './Project';
 import '@fontsource/roboto/300.css'
 import Experience from './Experience'
 import 'hover.css/css/hover-min.css';
-import { IconDefinition, faReact } from '@fortawesome/free-brands-svg-icons';
-import { faJava, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
+import {IconDefinition, faReact, faJava, faCss3Alt, faJs,faVuejs, faNode,faFontAwesome} from '@fortawesome/free-brands-svg-icons';
 import ContactForm from './ContactForm';
 import SideBar from './SideBar'
 import {useRef} from 'react'
 
-
- 
 
 export default function MainPage (){ 
 
   var iconsOne:IconDefinition[]=[faJava, faCss3Alt]
   var iconsTwo:IconDefinition[]=[faJava, faCss3Alt]
 
+  
   const aboutRef = useRef<HTMLDivElement>(null);
   const courseRef = useRef<HTMLDivElement>(null);
   const myRef = useRef<HTMLDivElement>(null);
   const workRef = useRef<HTMLDivElement>(null);
   const contactRef = useRef<HTMLDivElement>(null);
 
-
   var refs:any []=[aboutRef,courseRef, myRef,workRef,contactRef]
 
-  const images:string[]=['TAS1.png','TAS2.png','TAS3.png']
+  const imagesTAS:string[]=['TAS1.png','TAS2.png','TAS3.png']
+  const imagesCB:string[]=['CB1.png','CB2.png','CB3.png','CB4.png','CB5.png','CB6.png','CB7.png']
+  const imagesCalculator:string[]=['Calculator1.png','Calculator2.png','Calculator3.png']
+  const imagesSM:string[]=['SM1.png','SM2.png','SM3.png','SM4.png','SM5.png','SM6.png','SM7.png']
+  const imagesWG:string[]=['WG1.png','WG2.png','WG3.png']
+  const imagesPF:string[]=['PF1.png','PF2.png','PF3.png']
+
 
   const [scrollTop, setScrollTop] = useState<number>(0);
 
@@ -61,20 +64,81 @@ export default function MainPage (){
       <div ref={aboutRef} className='bg-slate-800 flex flex-col' >
 
         <About 
-        description=""
+        description="
+        My name is Karo Faraidoun mahmoud and in this e-portfolio you will gain an overview of my competences and experiences. Currently I am studying BSc in Computer Science at Norwegian University of Science and Technology (NTNU), where I have acquired knowledge and skills necessary to develop effective data systems with the users in focus. Through examples of work I have completed during my education, in the 'Course Projects' section, you will gain insight into how the competencies I have acquired align with an employment-related perspective. In addition, you may learn more about my personal projects in the 'My Projects' section. I have also In the 'Work Experience' section, you will gain an understanding of the experiences I have obtained as a result of employment. If you have any inquiries or would like to discuss potential opportunities, I encourage you to reach out to me through the provided contact form. "
         imageURL="pb.png"
        />
         <div ref={courseRef}>
 
         <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8 " >Course projects</Typography>
-      <Project
-      title="Title"
-      description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
-      bgImage="TAS1.png"
+     
+        <Project
+      title="Commerce Bay"
+      description="I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde.
+
+
+      Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten.
+      
+
+      Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
       icons={iconsOne}
       mysql={true}
-      images={images}
-      height="h-96"
+      images={imagesCB}
+      height="h-40"
+      width="w-80"
+      />
+<Project
+      title="SmartMat"
+      description="I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde.
+
+
+      Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten.
+      
+
+      Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
+      icons={iconsOne}
+      mysql={true}
+      images={imagesSM}
+      height="h-40"
+      width="w-80"
+      />
+       <Project
+      title="Calculator"
+      description="I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde.
+
+
+      Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten.
+      
+
+      Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
+      icons={iconsOne}
+      mysql={true}
+      images={imagesCalculator}
+      height="h-40"
+      width="w-80"
+      />
+     
+       <Project
+      title="Commerce Bay"
+      description=""
+      icons={iconsOne}
+      mysql={true}
+      images={imagesWG}
+      height="h-40"
+      width="w-80"
+      />
+        <Project
+      title="Tournament Administration System"
+      description="I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde.
+
+      Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten.
+      
+      Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
+      icons={iconsTwo}
+      mysql={false}
+      images={imagesTAS}
+      height="h-40"
+      width="w-80"
       />
       </div>
       <div ref={myRef}>
@@ -82,15 +146,14 @@ export default function MainPage (){
 
       <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8" >My projects</Typography>
       <Project
-      title="Title"
+      title="E-portfolio"
       time="Time"
       description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
-      bgImage="/TAS2.png"
       icons={iconsTwo}
       mysql={false}
-      images={images}
-      iconsHeight="h-4/5"
-      totalHeight="h-40"
+      images={imagesPF}
+      height="h-40"
+      width="w-80"
       />
       </div>
 
@@ -101,8 +164,10 @@ export default function MainPage (){
       
      <Experience
       imageURL='/mentor.png'
-      description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
-
+      title="Mentor"
+      descriptionOne="I august 2022 fikk jeg jobb som mentor i MentorNorge som er landets største privatundervisningstilbyder. Jobben har gitt meg muligheten til å hjelpe elever med lekser, fag og annet skolearbeid, samtidig som jeg skaper motivasjon og lærelyst. Grunnen til at jeg søkte på jobben er at jeg ønsket å gi elevene en mestringsfølelse, og dermed øke motivasjonen for skolearbeid."
+      descriptionTwo="I jobben som mentor er jeg hovedsakelig åpen for undervisning i matematikk på grunnskolen, ungdomsskolen og videregående. Arbeidsoppgavene innebærer å planlegge undervisningstimer og tilpasse undervisningen til eleven. Undervisningen kan altså variere fra elev til elev, og avhenger av nivå i ulike temaer. I tillegg er utviklingen til eleven gjennom året viktig for hvordan undervisningen utvikler seg. Dette er slik en mentor må observere og tilpasse ut ifra."
+      descriptionThree="Erfaringer jeg har tilegnet meg er at det er nødvendig å skape god kjemi med mennesker, og sørge for å bygge på et elev-til-elev konsept. Jeg har også lært noen formidlingsmetoder som kan være nyttig som et verktøy til å lære bort avanserte temaer til andre. Dette gjelder ikke bare i undervisningssammenheng, men også i forbindelse med prosjektarbeid."
         />
         </div>
         
@@ -179,7 +244,7 @@ function About(props:any){
       <div className="flex flex-col ">
         <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4">About me</Typography>
       <div className="flex lg:w-xl lg:h-72 lg:mb-0 mb-8"> 
-      <Typography className="text-xs lg:text-md md:text-sm sm:text-sm xs:text-xs xl:text-lg 2xl:text-xl ">{props.description}</Typography>
+      <Typography className="text-xs lg:text-md md:text-sm sm:text-sm xs:text-xs xl:text-md 2xl:text-lg ">{props.description}</Typography>
       </div>
 
       <div className="bg-slate-100 text-black rounded-3xl opacity-60 w-3/4">
