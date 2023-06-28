@@ -71,24 +71,24 @@ export default function SideBar(props:any) {
         
    
       >
-        <Tab label="About me" className='hover:text-indigo-600 mb-16 self-center' 
+        <Tab label="About me" className='hover:text-indigo-600 mb-16' 
         onClick={()=>handleTabClick(refs[0])}
 
       
         />
-        <Tab label="Course projects" className='hover:text-indigo-600 mb-16 self-center' 
+        <Tab label="Course projects" className='hover:text-indigo-600 mb-16' 
         onClick={()=>handleTabClick(refs[1])}
 
         
         />
-        <Tab label="My projects" className='hover:text-indigo-600 mb-16 self-center'          
+        <Tab label="My projects" className='hover:text-indigo-600 mb-16'          
         onClick={()=>handleTabClick(refs[2])}
         
         />
-        <Tab label="Work experience" className='hover:text-indigo-600 mb-16 self-center' 
+        <Tab label="Work experience" className='hover:text-indigo-600 mb-16 ' 
        onClick={()=>handleTabClick(refs[3])}
         />
-        <Tab label="Contact me" className='hover:text-indigo-600 mb-16 self-center' 
+        <Tab label="Contact me" className='hover:text-indigo-600 mb-16' 
         onClick={()=>handleTabClick(refs[4])}
         />
 

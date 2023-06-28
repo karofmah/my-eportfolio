@@ -70,6 +70,7 @@ export default function ContactForm(props:any){
         required
           id="outlined"
           label=""
+          className="shadow-white inset-shadow bg-gradient-to-r from-slate-400 to-white"
           placeholder="Name"
           name="from_name"
           type='text'
@@ -80,6 +81,8 @@ export default function ContactForm(props:any){
           required
           id="outlined"
           label=""
+          className="bg-gradient-to-r from-slate-400 to-white"
+
           placeholder="Email"
           name="from_email"
           type='email'
@@ -88,12 +91,13 @@ export default function ContactForm(props:any){
         </div>
       <TextField
           required
+            className="bg-gradient-to-r from-slate-400 to-white"
+
           id="filled-textarea"
           label=""
           placeholder="Enter your message"
           name="message"
           type='text'
-          className=""
           multiline
           rows={4}
           
