@@ -7,17 +7,14 @@ import Project from './Project';
 import '@fontsource/roboto/300.css'
 import Experience from './Experience'
 import 'hover.css/css/hover-min.css';
-import {IconDefinition, faReact, faJava, faCss3Alt, faJs,faVuejs, faNode,faFontAwesome} from '@fortawesome/free-brands-svg-icons';
+import {FaReact,FaVuejs,FaCss3Alt,FaJava} from'react-icons/fa';
+import { SiMysql,SiVuetify,SiMui,SiTailwindcss,SiSpring, SiTypescript,SiVercel } from "react-icons/si";
 import ContactForm from './ContactForm';
 import SideBar from './SideBar'
 import {useRef} from 'react'
 
-
 export default function MainPage (){ 
-
-  var iconsOne:IconDefinition[]=[faJava, faCss3Alt]
-  var iconsTwo:IconDefinition[]=[faJava, faCss3Alt]
-
+  const iconDimensions='h-16 w-24 mt-8 min-[480px]:mt-3 mt-10 self-center'
   
   const aboutRef = useRef<HTMLDivElement>(null);
   const courseRef = useRef<HTMLDivElement>(null);
@@ -27,12 +24,40 @@ export default function MainPage (){
 
   var refs:any []=[aboutRef,courseRef, myRef,workRef,contactRef]
 
-  const imagesTAS:string[]=['TAS1.png','TAS2.png','TAS3.png']
-  const imagesCB:string[]=['CB1.png','CB2.png','CB3.png','CB4.png','CB5.png','CB6.png','CB7.png']
-  const imagesCalculator:string[]=['Calculator1.png','Calculator2.png','Calculator3.png']
-  const imagesSM:string[]=['SM1.png','SM2.png','SM3.png','SM4.png','SM5.png','SM6.png','SM7.png']
-  const imagesWG:string[]=['WG1.png','WG2.png','WG3.png']
-  const imagesPF:string[]=['PF1.png','PF2.png','PF3.png']
+  const objectCB={
+    images:['CB1.png','CB2.png','CB3.png','CB4.png','CB5.png','CB6.png','CB7.png'],
+    icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>]
+  }
+
+  const objectSM={
+    images:['SM1.png','SM2.png','SM3.png','SM4.png','SM5.png','SM6.png','SM7.png'],
+    icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>,<SiVuetify className={iconDimensions}/>]
+
+  }
+  
+ 
+  const objectCalculator={
+    images:['Calculator1.png','Calculator2.png','Calculator3.png'],
+    icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>]
+
+  }
+  
+  const objectTAS={
+    images:['TAS1.png','TAS2.png','TAS3.png'],
+    icons:[<FaJava className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<FaCss3Alt className={iconDimensions}/>]
+  }
+
+  const objectWG={
+    images:['WG1.png','WG2.png','WG3.png'],
+    icons:[<FaJava className={iconDimensions}/>, <FaCss3Alt className={iconDimensions}/>]
+
+  }
+  const objectPF={
+    images:['PF1.png','PF2.png','PF3.png'],
+    icons:[<FaReact className={iconDimensions}/>, <SiTypescript className={iconDimensions}/>,<SiMui className={iconDimensions}/>,<SiTailwindcss className={iconDimensions}/>,<SiVercel className={iconDimensions}/>]
+
+  }
+ 
 
 
   const [scrollTop, setScrollTop] = useState<number>(0);
@@ -51,8 +76,8 @@ export default function MainPage (){
   }, []);
 
   return(
-    <div className='flex min-h-screen'> 
-    <div className='bg-gradient-to-b from-slate-100 to-slate-400 opacity-60 sticky top-0 h-screen w-3/5'
+    <div className='flex'> 
+    <div className='bg-gradient-to-b from-slate-100 to-slate-400 opacity-60 sticky top-0 h-screen w-4/5'
     
     >
       <SideBar 
@@ -81,9 +106,7 @@ export default function MainPage (){
       
 
       Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
-      icons={iconsOne}
-      mysql={true}
-      images={imagesCB}
+      object={objectCB}
       height="h-40"
       width="w-80"
       />
@@ -96,10 +119,8 @@ export default function MainPage (){
       
 
       Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
-      icons={iconsOne}
-      mysql={true}
-      images={imagesSM}
-      height="h-40"
+      object={objectSM}
+      height="h-60"
       width="w-80"
       />
        <Project
@@ -111,35 +132,31 @@ export default function MainPage (){
       
 
       Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
-      icons={iconsOne}
-      mysql={true}
-      images={imagesCalculator}
+      object={objectCalculator}
       height="h-40"
       width="w-80"
       />
      
-       <Project
-      title="Commerce Bay"
-      description=""
-      icons={iconsOne}
-      mysql={true}
-      images={imagesWG}
-      height="h-40"
-      width="w-80"
-      />
-        <Project
+     <Project
       title="Tournament Administration System"
       description="I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde.
 
       Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten.
       
       Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
-      icons={iconsTwo}
-      mysql={false}
-      images={imagesTAS}
+      object={objectTAS}
+      height="h-48 2xl:h-64"
+      width="w-80"
+      />  
+
+       <Project
+      title="War Games"
+      description=""
+      object={objectWG}
       height="h-40"
       width="w-80"
       />
+   
       </div>
       <div ref={myRef}>
 
@@ -149,10 +166,8 @@ export default function MainPage (){
       title="E-portfolio"
       time="Time"
       description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
-      icons={iconsTwo}
-      mysql={false}
-      images={imagesPF}
-      height="h-40"
+      object={objectPF}
+      height="h-60"
       width="w-80"
       />
       </div>
@@ -161,7 +176,7 @@ export default function MainPage (){
     <div ref={workRef}>
 
       <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8">Work experience</Typography>
-      
+    
      <Experience
       imageURL='/mentor.png'
       title="Mentor"
@@ -264,7 +279,7 @@ function About(props:any){
      
       </div>
       <div className="flex min-[481px]:flex-row min-[320px]:flex-col">
-      <img src={props.imageURL} alt="Profile picture" className="opacity-80 hover:translate-x-1 hover:-translate-y-1 hover:shadow-2xl object-cover object-center max-w-md mx-8 mt-16 mr-16 rounded-full h-48 w-32 xs:h-32 sm:h-48 md:h-48 lg:h-3/5 lg:w-64 2xl:h-4/5 2xl:w-80" />
+      <img src={props.imageURL} alt="Profile picture" className="opacity-80 hover:translate-x-1 hover:-translate-y-1 hover:shadow-2xl object-cover object-center max-w-md mx-8 mt-16 mr-16 rounded-full h-48 w-32 xs:h-32 sm:h-48 md:h-48 lg:h-3/5 lg:w-64 2xl:h-4/5 2xl:w-80 duration-200" />
 
 </div>
 

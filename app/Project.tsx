@@ -1,16 +1,16 @@
 import React from "react";
 import {useState,useEffect, useRef} from 'react'
 import Typography from '@mui/material/Typography';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
+
 export default function Project(props:any){
-
-  const images:string[]=props.images
-
   const [image,setImage]=useState<number>(0)
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
+
+  const images:string[]=props.object.images;
+  const icons:any[]=props.object.icons
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -23,9 +23,7 @@ export default function Project(props:any){
     return () => clearInterval(interval);
   }, [image]);
    
-  var icons: IconDefinition[]=props.icons
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-
+  
     return(
       <div>
 {window.innerWidth>640 &&(
@@ -39,13 +37,9 @@ export default function Project(props:any){
 
      {!isHovered &&
      <div className="flex flex-wrap w-fit h-fit">
-      {icons.map((icon, index) => (
-        <FontAwesomeIcon key={index} icon={icon} className="h-16 w-24 min-[480px]:mt-0 mt-8 self-center"/>
-      ))}
-   
-       {props.mysql && (
-    <img src="/mysql.png" alt="mysql" className="h-16 w-24 mt-8 min-[480px]:mt-0 mt-8 self-center" />
-  )} 
+      
+      {icons.map((icon) => icon)}
+
   </div>
 }
   {!isHovered && <KeyboardArrowDownIcon className="self-center animate-bounce"/>}
@@ -57,19 +51,14 @@ export default function Project(props:any){
     {window.innerWidth<640 && (
       
       <div className="flex flex-col">
-        <div className="duration-500">
-        <img src={images[image]} alt="Project" />
+        <div className="">
+        <img src={props.object.images[image]} alt="Project" />
 
         </div>
-         <div className="flex ">
-      {icons.map((icon, index) => (
-        <FontAwesomeIcon key={index} icon={icon} className="h-16 w-24 min-[480px]:mt-0 mt-8 self-center"/>
-      ))}
-    
-    
-       {props.mysql && (
-    <img src="/mysql.png" alt="mysql" className="h-16 w-24 mt-8 min-[480px]:mt-0 mt-8 self-center" />
-  )}  
+         <div className="flex mt-8 ">
+         {icons.map((icon) => icon)}
+
+     
   </div>
   <Typography className='m-4 text-xs lg:text-md md:text-sm sm:text-sm xs:text-xs xl:text-lg 2xl:text-xl'>{props.description}</Typography>
 
