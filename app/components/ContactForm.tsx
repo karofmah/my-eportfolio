@@ -5,7 +5,8 @@ import SendIcon from '@mui/icons-material/Send';
 import Button from '@mui/material/Button';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
-import LinearIndeterminate from './LinearProgress';
+import Box from '@mui/material/Box';
+import LinearProgress from '@mui/material/LinearProgress';
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
   props,
   ref,
@@ -106,7 +107,10 @@ export default function ContactForm(props:any){
         <Button type="submit" value="Send"  variant="contained" endIcon={<SendIcon />}>
           Send
           </Button>
-          {isSending && <LinearIndeterminate/>
+          {isSending &&
+          <Box sx={{ width: '100%' }}>
+            <LinearProgress />
+            </Box>
 }
 
         </div>

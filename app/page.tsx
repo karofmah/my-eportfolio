@@ -1,7 +1,8 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import CircularIndeterminate from './Progress';
-import MainPage from './MainPage';
+import MainPage from './components/MainPage';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,7 +17,9 @@ export default function App() {
     <div>
       {isLoading ? (
         <div className="bg-slate-800">
-        <CircularIndeterminate />
+        <Box className="h-screen flex items-center justify-center">
+      <CircularProgress  />
+    </Box>
 
         </div>
       ) : (
