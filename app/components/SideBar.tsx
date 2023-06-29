@@ -33,21 +33,21 @@ export default function SideBar(props:any) {
   
   useEffect(() => {
     
-      if(props.valueY<775){
+      if(props.valueY<768){
         setValue(0)
       }
        
-      else if(props.valueY<1920){
+      else if(props.valueY<4151){
         setValue(1)
       }
        
 
-      else if(props.valueY<2500){
+      else if(props.valueY<4872){
         setValue(2)
       }
         
 
-      else if(props.valueY<2650){
+      else if(props.valueY<5361){
         setValue(3)
       }
         
