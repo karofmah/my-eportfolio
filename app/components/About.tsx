@@ -1,49 +1,48 @@
 import Typography from "@mui/material/Typography";
+import {SiGithub, SiLinkedin} from 'react-icons/si';
+import {AiOutlineMail, AiOutlinePhone, AiOutlineFileText} from 'react-icons/ai';
+import {BiMap} from "react-icons/bi";
+
 
 export default function About(props:any){ 
-    const listItems = [
+
+  const iconStyle='w-8 h-8 hover:scale-125 duration-200'
+    const listItems:any[] = [
       {
         link: 'https://github.com/karofmah',
-        imgSrc: 'github.png',
+        icon: <SiGithub  className={iconStyle}/>,
         text: 'Github',
-        dimensions: 'w-10 h-10 hover:scale-125 duration-200'
+        
   
       },
       {
         link: 'mailto:karo.f.mahmoud@gmail.com',
-        imgSrc: '/Email.png',
+        icon: <AiOutlineMail className={iconStyle}/>,
         text: 'karo.f.mahmoud@gmail.com',
-        dimensions: 'w-8 h-8 hover:scale-125 duration-200'
   
   
       },
-      //Github instead of address
       {
         link: 'MinCV.pdf',
-        imgSrc: 'CV.png' ,
+        icon: <AiOutlineFileText className={iconStyle}/> ,
         text: 'CV',
-        dimensions: 'w-8 h-8 hover:scale-125 duration-200'
   
       },
       {
         link: 'https://www.linkedin.com/in/karo-mahmoud-933875248/',
-        imgSrc: 'linkedin.png',
-        text: 'Linkedin',
-        dimensions: 'w-8 h-8 hover:scale-125 duration-200'
-  
+        icon: <SiLinkedin className={iconStyle}/>,
+        text: 'Linkedin',  
       },
       {
         link: 'tel:+4746918226',
-        imgSrc: 'phone.png',
+        icon: <AiOutlinePhone className={iconStyle}/>,
         text: '+47 469 18 226',
-        dimensions: 'w-8 h-8 hover:scale-125 duration-200'
   
       },
       {
         link: 'https://goo.gl/maps/WCGDxMcvAadhjVfi9',
-        imgSrc: 'Map.png',
+        icon: <BiMap className={iconStyle}/>,
         text: 'Norge, Trondheim Singsakerbakken 4F, 7030',
-        dimensions: 'w-8 h-8 hover:scale-125 duration-200'
   
       }
     ];
@@ -64,7 +63,7 @@ export default function About(props:any){
   {listItems.map((item, index) => (
       <li key={index} className='mb-6 ml-6 ' >
         <a href={item.link} className="flex">
-          <img src={item.imgSrc} alt="" className={item.dimensions} />
+        {item.icon}
           <Typography className='mt-1 ml-2 hvr-underline-from-left text-xs break-all'>{item.text}</Typography>
         </a>
       </li>

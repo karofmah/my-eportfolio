@@ -76,7 +76,7 @@ export default function MainPage (){
 
   return(
     <div className='flex'> 
-    <div className='bg-gradient-to-b from-slate-100 to-slate-400 opacity-60 sticky top-0 h-screen w-4/5'
+    <div className='bg-slate-200 opacity-60 sticky top-0 h-screen w-4/5'
     
     >
       <SideBar 
