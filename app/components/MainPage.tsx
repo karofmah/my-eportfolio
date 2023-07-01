@@ -27,8 +27,8 @@ export default function MainPage (){
     title:"Commerce Bay",
     images:['CB1.png','CB2.png','CB3.png','CB4.png','CB5.png','CB6.png','CB7.png'],
     icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>],
-    description:""
-
+    description:"",
+    repo:"https://github.com/karofmah/E-Commerce-Project"
     
   }
 
@@ -36,7 +36,9 @@ export default function MainPage (){
     title:"SmartMat",
     images:['SM1.png','SM2.png','SM3.png','SM4.png','SM5.png','SM6.png','SM7.png'],
     icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>,<SiVuetify className={iconDimensions}/>],
-    description:""
+    description:"",
+    repo:""
+    
 
 
   }
@@ -46,7 +48,8 @@ export default function MainPage (){
     title:"Calculator",
     images:['Calculator1.png','Calculator2.png','Calculator3.png'],
     icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>],
-    description:""
+    description:"",
+    repo:"https://github.com/karofmah/IDATT2105-Full-Stack-Application-Development"
 
 
   }
@@ -55,20 +58,23 @@ export default function MainPage (){
     title:"Tournament Administration System",
     images:['TAS1.png','TAS2.png','TAS3.png'],
     icons:[<FaJava className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<FaCss3Alt className={iconDimensions}/>],
-    description:"I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde. Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten. Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
+    description:"I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde. Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten. Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder.",
+    repo:"https://github.com/karofmah/Tournament-Administration-System"
   }
 
   const objectWG={
     title:"War Games",
     images:['WG1.png','WG2.png','WG3.png'],
     icons:[<FaJava className={iconDimensions}/>, <FaCss3Alt className={iconDimensions}/>],
-    description:""
+    description:"",
+    repo:"https://github.com/karofmah/War-Games"
   }
   const objectPF={
     title:"E-portfolio",
     images:['PF1.png','PF2.png','PF3.png'],
     icons:[<FaReact className={iconDimensions}/>, <SiTypescript className={iconDimensions}/>,<SiMui className={iconDimensions}/>,<SiTailwindcss className={iconDimensions}/>,<SiVercel className={iconDimensions}/>],
-    description:""
+    description:"",
+    repo:"https://github.com/karofmah/my-eportfolio"
 
 
   }

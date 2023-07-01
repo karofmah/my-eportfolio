@@ -2,7 +2,8 @@ import React from "react";
 import {useState,useEffect, useRef} from 'react'
 import Typography from '@mui/material/Typography';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import {SiGithub} from 'react-icons/si';
+import {GoRepo} from 'react-icons/go';
+import 'hover.css/css/hover-min.css';
 
 export default function Project(props:any){
   const [image,setImage]=useState<number>(0)
@@ -36,8 +37,8 @@ export default function Project(props:any){
       <div className="flex">
       <h3 className='m-4 text-xl xl:text-2xl 2xl:text-3xl'> {props.object.title} </h3>
       {isHovered && 
-      <a href={props.link}>
-        <SiGithub className='w-8 h-8 mt-4 hover:scale-125 duration-200'/>
+      <a href={props.object.repo}>
+        <GoRepo className={`w-7 h-7 mt-5 hvr-float-shadow`}/>
         </a>}
       </div>
 

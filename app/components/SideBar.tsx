@@ -14,7 +14,7 @@ export default function SideBar(props:any) {
 
   var refs:any []=props.tabRefs
   
-  const tabStyle='hover:text-indigo-600 mb-16 bg-gradient-to-t hover:from-slate-300 duration-500'
+  const tabStyle='hover:text-blue-500 mb-16 bg-gradient-to-t hover:from-slate-300 duration-200'
     
 
     const handleTabClick = (ref:React.RefObject<HTMLDivElement>) => {
@@ -73,7 +73,7 @@ export default function SideBar(props:any) {
    
       >
         
-        <Tab label="About me" className='hover:text-indigo-600 mb-16 hover:bg-gradient-to-t hover:from-slate-300 duration-200 hover:animate-ping"' 
+        <Tab label="About me" className={tabStyle} 
         onClick={()=>handleTabClick(refs[0])}
 
       
