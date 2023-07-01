@@ -2,7 +2,7 @@ import React from "react";
 import {useState,useEffect, useRef} from 'react'
 import Typography from '@mui/material/Typography';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-
+import {SiGithub} from 'react-icons/si';
 
 export default function Project(props:any){
   const [image,setImage]=useState<number>(0)
@@ -33,7 +33,13 @@ export default function Project(props:any){
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       >  
-     <h3 className='m-4 text-xl xl:text-2xl 2xl:text-3xl'> {props.title} </h3>
+      <div className="flex">
+      <h3 className='m-4 text-xl xl:text-2xl 2xl:text-3xl'> {props.object.title} </h3>
+      {isHovered && 
+      <a href={props.link}>
+        <SiGithub className='w-8 h-8 mt-4 hover:scale-125 duration-200'/>
+        </a>}
+      </div>
 
      {!isHovered &&
      <div className="flex flex-wrap w-fit h-fit">
@@ -43,7 +49,7 @@ export default function Project(props:any){
   </div>
 }
   {!isHovered && <KeyboardArrowDownIcon className="self-center animate-bounce"/>}
-       <Typography className='m-4 text-xs lg:text-md md:text-sm sm:text-sm xs:text-xs xl:text-lg 2xl:text-xl'>{props.description}</Typography>
+       <Typography className='m-4 text-xs lg:text-md md:text-sm sm:text-sm xs:text-xs xl:text-lg 2xl:text-xl'>{props.object.description}</Typography>
      </div>
      
     </div>
@@ -60,7 +66,7 @@ export default function Project(props:any){
 
      
   </div>
-  <Typography className='m-4 text-xs lg:text-md md:text-sm sm:text-sm xs:text-xs xl:text-lg 2xl:text-xl'>{props.description}</Typography>
+  <Typography className='m-4 text-xs lg:text-md md:text-sm sm:text-sm xs:text-xs xl:text-lg 2xl:text-xl'>{props.object.description}</Typography>
 
       </div>
     )}

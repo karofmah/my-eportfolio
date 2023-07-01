@@ -24,36 +24,52 @@ export default function MainPage (){
   var refs:any []=[aboutRef,courseRef, myRef,workRef,contactRef]
 
   const objectCB={
+    title:"Commerce Bay",
     images:['CB1.png','CB2.png','CB3.png','CB4.png','CB5.png','CB6.png','CB7.png'],
-    icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>]
+    icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>],
+    description:""
+
+    
   }
 
   const objectSM={
+    title:"SmartMat",
     images:['SM1.png','SM2.png','SM3.png','SM4.png','SM5.png','SM6.png','SM7.png'],
-    icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>,<SiVuetify className={iconDimensions}/>]
+    icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>,<SiVuetify className={iconDimensions}/>],
+    description:""
+
 
   }
   
  
   const objectCalculator={
+    title:"Calculator",
     images:['Calculator1.png','Calculator2.png','Calculator3.png'],
-    icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>]
+    icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>],
+    description:""
+
 
   }
   
   const objectTAS={
+    title:"Tournament Administration System",
     images:['TAS1.png','TAS2.png','TAS3.png'],
-    icons:[<FaJava className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<FaCss3Alt className={iconDimensions}/>]
+    icons:[<FaJava className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<FaCss3Alt className={iconDimensions}/>],
+    description:"I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde. Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten. Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
   }
 
   const objectWG={
+    title:"War Games",
     images:['WG1.png','WG2.png','WG3.png'],
-    icons:[<FaJava className={iconDimensions}/>, <FaCss3Alt className={iconDimensions}/>]
-
+    icons:[<FaJava className={iconDimensions}/>, <FaCss3Alt className={iconDimensions}/>],
+    description:""
   }
   const objectPF={
+    title:"E-portfolio",
     images:['PF1.png','PF2.png','PF3.png'],
-    icons:[<FaReact className={iconDimensions}/>, <SiTypescript className={iconDimensions}/>,<SiMui className={iconDimensions}/>,<SiTailwindcss className={iconDimensions}/>,<SiVercel className={iconDimensions}/>]
+    icons:[<FaReact className={iconDimensions}/>, <SiTypescript className={iconDimensions}/>,<SiMui className={iconDimensions}/>,<SiTailwindcss className={iconDimensions}/>,<SiVercel className={iconDimensions}/>],
+    description:""
+
 
   }
  
@@ -75,8 +91,8 @@ export default function MainPage (){
   }, []);
 
   return(
-    <div className='flex'> 
-    <div className='bg-slate-200 opacity-60 sticky top-0 h-screen w-4/5'
+    <div className='flex bg-slate-200 opacity-60'> 
+    <div className='sticky top-0 h-screen w-4/5'
     
     >
       <SideBar 
@@ -95,62 +111,30 @@ export default function MainPage (){
         <div ref={courseRef}>
 
         <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8 " >Course projects</Typography>
-     
         <Project
-      title="Commerce Bay"
-      description="I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde.
-
-
-      Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten.
-      
-
-      Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
-      object={objectCB}
-      height="h-40"
-      width="w-80"
-      />
-<Project
-      title="SmartMat"
-      description="I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde.
-
-
-      Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten.
-      
-
-      Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
-      object={objectSM}
-      height="h-60"
-      width="w-80"
-      />
+          object={objectCB}
+          height="h-40"
+          width="w-80"
+        />
+        <Project
+          object={objectSM}
+          height="h-60"
+          width="w-80"
+        />
        <Project
-      title="Calculator"
-      description="I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde.
-
-
-      Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten.
-      
-
-      Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
-      object={objectCalculator}
-      height="h-40"
-      width="w-80"
+          object={objectCalculator}
+          height="h-40"
+          width="w-80"
       />
      
      <Project
-      title="Tournament Administration System"
-      description="I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde.
-
-      Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten.
       
-      Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder."
       object={objectTAS}
       height="h-48 2xl:h-64"
       width="w-80"
       />  
 
        <Project
-      title="War Games"
-      description=""
       object={objectWG}
       height="h-40"
       width="w-80"
@@ -162,9 +146,7 @@ export default function MainPage (){
 
       <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8" >My projects</Typography>
       <Project
-      title="E-portfolio"
       time="Time"
-      description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat mass a quis enim. Donec pede justo, fringilla vel, "
       object={objectPF}
       height="h-60"
       width="w-80"
