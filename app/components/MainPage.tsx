@@ -119,31 +119,31 @@ export default function MainPage (){
         <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8 " >Course projects</Typography>
         <Project
           object={objectCB}
-          height="h-40"
-          width="w-80"
+          height="lg:h-40"
+          width="lg:w-80"
         />
         <Project
           object={objectSM}
-          height="h-60"
-          width="w-80"
+          height="lg:h-60"
+          width="lg:w-80"
         />
        <Project
           object={objectCalculator}
-          height="h-40"
-          width="w-80"
+          height="lg:h-40"
+          width="lg:w-80"
       />
      
      <Project
       
       object={objectTAS}
-      height="h-48 2xl:h-64"
-      width="w-80"
+      height="lg:h-48"
+      width="lg:w-80"
       />  
 
        <Project
       object={objectWG}
-      height="h-40"
-      width="w-80"
+      height="lg:h-40"
+      width="lg:w-80"
       />
    
       </div>
@@ -154,8 +154,8 @@ export default function MainPage (){
       <Project
       time="Time"
       object={objectPF}
-      height="h-60"
-      width="w-80"
+      height="lg:h-60"
+      width="lg:w-80"
       />
       </div>
 
