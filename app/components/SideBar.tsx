@@ -23,9 +23,7 @@ export default function SideBar(props:any) {
   
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    
     setValue(newValue);
-    console.log(newValue)
   };
 
   
@@ -51,31 +49,28 @@ export default function SideBar(props:any) {
         orientation="vertical"
         value={value}
         onChange={handleChange}
-        
-   
       >
-        
+
         <Tab label="About me" className={tabStyle} 
         onClick={()=>handleTabClick(refs[0])}
-
-      
         />
+
         <Tab label="Course projects" className={tabStyle} 
         onClick={()=>handleTabClick(refs[1])}
-
-        
         />
+
         <Tab label="My projects" className={tabStyle}     
         onClick={()=>handleTabClick(refs[2])}
-        
         />
+
         <Tab label="Work experience" className={tabStyle}
        onClick={()=>handleTabClick(refs[3])}
         />
+
         <Tab label="Contact me" className={tabStyle}
         onClick={()=>handleTabClick(refs[4])}
         />
-
+        
       </Tabs>
     
 

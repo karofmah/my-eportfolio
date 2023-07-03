@@ -23,6 +23,10 @@ export default function MainPage (){
 
   var refs:any []=[aboutRef,courseRef, myRef,workRef,contactRef]
 
+  const experienceDescription=["In August 2022, I secured a job as a mentor at MentorNorge, which is the country's largest private tutoring provider. This position has provided me with the opportunity to assist students with homework, subjects, and other academic tasks while simultaneously fostering motivation and a desire to learn. The reason I applied for this job was to instill a sense of mastery in the students, thereby increasing their motivation for schoolwork.", 
+  "As a mentor, my primary focus is on teaching mathematics at the primary, lower secondary, and upper secondary levels. My responsibilities include planning instructional sessions and tailoring the teaching approach to each individual student. Consequently, the instruction can vary from one student to another and depends on their proficiency in different topics. Additionally, monitoring the student's progress throughout the year is crucial in determining the trajectory of the instruction. This is something a mentor must observe and adjust accordingly.",
+  "Through my experiences, I have learned that establishing a strong rapport with individuals is essential, as well as implementing a peer-to-peer approach. I have also acquired some effective communication methods that can be useful tools for teaching complex subjects to others. This not only applies to educational contexts but also in the context of project work."]
+
   const objectCB={
     title:"Commerce Bay",
     images:['CB1.png','CB2.png','CB3.png','CB4.png','CB5.png','CB6.png','CB7.png'],
@@ -149,7 +153,6 @@ export default function MainPage (){
 
       <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8" >My projects</Typography>
       <Project
-      time="Time"
       object={objectPF}
       height="lg:h-60"
       width="lg:w-80"
@@ -164,9 +167,7 @@ export default function MainPage (){
      <Experience
       imageURL='/mentor.png'
       title="Mentor"
-      descriptionOne="I august 2022 fikk jeg jobb som mentor i MentorNorge som er landets største privatundervisningstilbyder. Jobben har gitt meg muligheten til å hjelpe elever med lekser, fag og annet skolearbeid, samtidig som jeg skaper motivasjon og lærelyst. Grunnen til at jeg søkte på jobben er at jeg ønsket å gi elevene en mestringsfølelse, og dermed øke motivasjonen for skolearbeid."
-      descriptionTwo="I jobben som mentor er jeg hovedsakelig åpen for undervisning i matematikk på grunnskolen, ungdomsskolen og videregående. Arbeidsoppgavene innebærer å planlegge undervisningstimer og tilpasse undervisningen til eleven. Undervisningen kan altså variere fra elev til elev, og avhenger av nivå i ulike temaer. I tillegg er utviklingen til eleven gjennom året viktig for hvordan undervisningen utvikler seg. Dette er slik en mentor må observere og tilpasse ut ifra."
-      descriptionThree="Erfaringer jeg har tilegnet meg er at det er nødvendig å skape god kjemi med mennesker, og sørge for å bygge på et elev-til-elev konsept. Jeg har også lært noen formidlingsmetoder som kan være nyttig som et verktøy til å lære bort avanserte temaer til andre. Dette gjelder ikke bare i undervisningssammenheng, men også i forbindelse med prosjektarbeid."
+      description={experienceDescription}
         />
         </div>
         
