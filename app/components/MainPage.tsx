@@ -78,8 +78,6 @@ export default function MainPage (){
 
 
   }
- 
-
 
   const [scrollTop, setScrollTop] = useState<number>(0);
 
@@ -107,14 +105,13 @@ export default function MainPage (){
       />
     </div>
        
-      <div ref={aboutRef} className='bg-slate-800 flex flex-col' >
-
+      <div ref={aboutRef}  className='bg-slate-800 flex flex-col' >
         <About 
         description="
         My name is Karo Faraidoun mahmoud and in this e-portfolio you will gain an overview of my competences and experiences. Currently I am studying BSc in Computer Science at Norwegian University of Science and Technology (NTNU), where I have acquired knowledge and skills necessary to develop effective data systems with the users in focus. Through examples of work I have completed during my education, in the 'Course Projects' section, you will gain insight into how the competencies I have acquired align with an employment-related perspective. In addition, you may learn more about my personal projects in the 'My Projects' section. I have also In the 'Work Experience' section, you will gain an understanding of the experiences I have obtained as a result of employment. If you have any inquiries or would like to discuss potential opportunities, I encourage you to reach out to me through the provided contact form. "
         imageURL="pb.png"
        />
-        <div ref={courseRef}>
+        <div ref={courseRef} data-value={window.scrollY}>
 
         <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8 " >Course projects</Typography>
         <Project

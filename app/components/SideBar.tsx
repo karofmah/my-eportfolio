@@ -1,10 +1,7 @@
 import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import {useRef,useEffect, useState} from 'react'
-
-
-
+import {useEffect} from 'react'
 
 export default function SideBar(props:any) {
   
@@ -33,36 +30,21 @@ export default function SideBar(props:any) {
 
   
   useEffect(() => {
-    
-      if(props.valueY<768){
+    if(window.scrollY + window.innerHeight > document.documentElement.scrollHeight-1) {
+      setValue(4)
+      } else if(refs[3].current!.getBoundingClientRect().top<=0){
+        setValue(3)
+      } else if(refs[2].current!.getBoundingClientRect().top<=0){
+        setValue(2)
+      } else if(refs[1].current!.getBoundingClientRect().top<=0){
+        setValue(1)
+      } else if(refs[0].current!.getBoundingClientRect().top<=0){
         setValue(0)
       }
-       
-      else if(props.valueY<4151){
-        setValue(1)
-      }
-       
-
-      else if(props.valueY<4872){
-        setValue(2)
-      }
         
-
-      else if(props.valueY<5361){
-        setValue(3)
-      }
-        
-
-      else{
-        setValue(4)
-      }
-
-
-    
   },[props.valueY])
 
   return (
-    
     
       <Tabs
         className="mt-12 br-1 "
