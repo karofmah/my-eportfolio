@@ -28,10 +28,10 @@ export default function MainPage (){
   "Through my experiences, I have learned that establishing a strong rapport with individuals is essential, as well as implementing a peer-to-peer approach. I have also acquired some effective communication methods that can be useful tools for teaching complex subjects to others. This not only applies to educational contexts but also in the context of project work."]
 
   const objectCB={
-    title:"Commerce Bay",
+    title:"E-commerce",
     images:['CB1.png','CB2.png','CB3.png','CB4.png','CB5.png','CB6.png','CB7.png'],
     icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>],
-    description:"",
+    description:"In the subject IDATT2105 I took part in a volunteer project with three other students.  The goal was to develop a full stack application designed for e-commerce purposes in the span of a week. Mainly I worked on tasks related to the back-end of the application. The project has improved my abiltiy to be able to acquire new knowledge in a continuously evolving field.",
     repo:"https://github.com/karofmah/E-Commerce-Project"
     
   }
@@ -40,7 +40,7 @@ export default function MainPage (){
     title:"SmartMat",
     images:['SM1.png','SM2.png','SM3.png','SM4.png','SM5.png','SM6.png','SM7.png'],
     icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>,<SiVuetify className={iconDimensions}/>],
-    description:"",
+    description:"In the subject IDATT2106 I contributed to a group-based agile project that needed to be completed within three weeks, with scrum as the applied project management framework. My group consisted of 7 students, and the purpose was to create a full-stack application that may decrease food waste in households. In this project I fulfilled my role as a scrum master, but I also worked on the back-end of the project as a developer. I also helped my team by writing a part of the final report. This project enhanced my competence in being able to share and disseminate information and knowledge with team members and clients. I also gained more experience in evaluating other people’s work.",
     repo:""
     
 
@@ -62,7 +62,7 @@ export default function MainPage (){
     title:"Tournament Administration System",
     images:['TAS1.png','TAS2.png','TAS3.png'],
     icons:[<FaJava className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<FaCss3Alt className={iconDimensions}/>],
-    description:"I faget IDATT1002 ble det utdelt et gruppeprosjekt der oppgaven var å utvikle et verktøy for å administrere en turnering med flere lag. Min gruppe ble enige om å utføre prosjektet med NTNUI e-sport som kunde. Prosjektet bestod av flere deler, deriblant planlegging, utvikling av back-end og front-end, og integrering av database, i tillegg til en sluttrapport. I dette prosjektet bidro jeg hovedsakelig med å planlegge prosjektet, å fokusere på back-end av systemet og skrive sluttrapporten. Gjennom dette prosjektet i IDATT1002 har jeg lært meg å kunne jobbe effektivt og målrettet i et team mot et felles mål. For å gjøre dette har jeg brukt programmeringskompetanse i samspill med systemutviklingsmetoder.",
+    description:"In the course IDATT1002, a group project was assigned with the task of developing a tool for managing a multi-team tournament. My group agreed to execute the project with NTNUI e-sport as the client. The project consisted of several components, including planning, back-end and front-end development, database integration, as well as a final report. In this project, my main contributions involved project planning, focusing on the back-end of the system, and writing the final report. Through this project in IDATT1002, I have acquired the ability to work efficiently and purposefully in a team towards a common goal. To achieve this, I applied programming expertise in conjunction with system development methodologies.",
     repo:"https://github.com/karofmah/Tournament-Administration-System"
   }
 
@@ -112,20 +112,20 @@ export default function MainPage (){
       <div ref={aboutRef}  className='bg-slate-800 flex flex-col' >
         <About 
         description="
-        My name is Karo Faraidoun mahmoud and in this e-portfolio you will gain an overview of my competences and experiences. Currently I am studying BSc in Computer Science at Norwegian University of Science and Technology (NTNU), where I have acquired knowledge and skills necessary to develop effective data systems with the users in focus. Through examples of work I have completed during my education, in the 'Course Projects' section, you will gain insight into how the competencies I have acquired align with an employment-related perspective. In addition, you may learn more about my personal projects in the 'My Projects' section. I have also In the 'Work Experience' section, you will gain an understanding of the experiences I have obtained as a result of employment. If you have any inquiries or would like to discuss potential opportunities, I encourage you to reach out to me through the provided contact form. "
+        My name is Karo Faraidoun mahmoud and in this e-portfolio you will gain an overview of my competences and experiences. Currently I am studying BSc in Computer Science at Norwegian University of Science and Technology (NTNU), where I have acquired knowledge and skills necessary to develop effective data systems with the users in focus. Through examples of work I have completed during my education, in the 'Course Projects' section, you will gain insight into how the competencies I have acquired align with an employment-related perspective. In addition, you may learn more about my personal projects in the 'My Projects' section. In the 'Work Experience' section, you will gain an understanding of the experiences I have obtained as a result of employment. If you have any inquiries or would like to discuss potential opportunities, I encourage you to reach out to me through the provided contact form. "
         imageURL="pb.png"
        />
-        <div ref={courseRef} data-value={window.scrollY}>
+        <div ref={courseRef}>
 
         <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8 " >Course projects</Typography>
         <Project
           object={objectCB}
-          height="lg:h-40"
+          height="lg:h-40 lg:hover:h-72"
           width="lg:w-80"
         />
         <Project
           object={objectSM}
-          height="lg:h-60"
+          height="lg:h-60 lg:hover:h-4/5"
           width="lg:w-80"
         />
        <Project
@@ -137,7 +137,7 @@ export default function MainPage (){
      <Project
       
       object={objectTAS}
-      height="lg:h-48"
+      height="lg:h-48 lg:hover:h-4/5"
       width="lg:w-80"
       />  
 
