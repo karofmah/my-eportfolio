@@ -2,6 +2,7 @@ import Typography from "@mui/material/Typography";
 import {SiGithub, SiLinkedin} from 'react-icons/si';
 import {AiOutlineMail, AiOutlinePhone, AiOutlineFileText} from 'react-icons/ai';
 import {BiMap} from "react-icons/bi";
+import 'hover.css/css/hover.css';
 
 
 export default function About(props:any){ 
@@ -64,7 +65,7 @@ export default function About(props:any){
       <li key={index} className='mb-6 ml-6 ' >
         <a href={item.link} className="flex">
         {item.icon}
-          <Typography className='mt-1 ml-2 hvr-underline-from left text-xs break-all'>{item.text}</Typography>
+          <Typography className='mt-1 ml-2 hvr-underline-from-left text-xs break-all'>{item.text}</Typography>
         </a>
       </li>
     ))}

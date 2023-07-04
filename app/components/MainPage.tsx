@@ -126,12 +126,12 @@ export default function MainPage (){
         />
         <Project
           object={objectSM}
-          height="lg:h-60 lg:hover:h-4/5"
+          height="lg:h-60 lg:hover:h-5/6"
           width="lg:w-80"
         />
        <Project
           object={objectCalculator}
-          height="lg:h-40"
+          height="lg:h-40 lg:hover:h-60"
           width="lg:w-80"
       />
      
@@ -144,7 +144,7 @@ export default function MainPage (){
 
        <Project
       object={objectWG}
-      height="lg:h-40"
+      height="lg:h-40 lg:hover:h-80"
       width="lg:w-80"
       />
    
@@ -155,7 +155,7 @@ export default function MainPage (){
       <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8" >My projects</Typography>
       <Project
       object={objectPF}
-      height="lg:h-60"
+      height="lg:h-60 lg:hover:h-52"
       width="lg:w-80"
       />
       </div>
