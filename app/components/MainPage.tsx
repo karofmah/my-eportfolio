@@ -11,6 +11,7 @@ import { SiMysql,SiVuetify,SiMui,SiTailwindcss,SiSpring, SiTypescript,SiVercel }
 import ContactForm from './ContactForm';
 import SideBar from './SideBar'
 import {useRef} from 'react'
+import {TbBrandNextjs} from 'react-icons/tb'
 
 export default function MainPage (){ 
   const iconDimensions='h-16 w-24 mt-8 min-[480px]:mt-3 mt-10 self-center'
@@ -31,7 +32,7 @@ export default function MainPage (){
     title:"E-commerce",
     images:['CB1.png','CB2.png','CB3.png','CB4.png','CB5.png','CB6.png','CB7.png'],
     icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>],
-    description:"In the subject IDATT2105 I took part in a volunteer project with three other students.  The goal was to develop a full stack application designed for e-commerce purposes in the span of a week. Mainly I worked on tasks related to the back-end of the application. The project has improved my abiltiy to be able to acquire new knowledge in a continuously evolving field.",
+    description:"In the subject IDATT2105 I took part in a volunteer project with three other students.  The goal was to develop a full stack application designed for e-commerce purposes in the span of a week. Mainly I worked on tasks related to the back-end of the application. The project has improved my ability to be able to acquire new knowledge in a continuously evolving field.",
     repo:"https://github.com/karofmah/E-Commerce-Project"
     
   }
@@ -40,7 +41,7 @@ export default function MainPage (){
     title:"SmartMat",
     images:['SM1.png','SM2.png','SM3.png','SM4.png','SM5.png','SM6.png','SM7.png'],
     icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>,<SiVuetify className={iconDimensions}/>],
-    description:"In the subject IDATT2106 I contributed to a group-based agile project that needed to be completed within three weeks, with scrum as the applied project management framework. My group consisted of 7 students, and the purpose was to create a full-stack application that may decrease food waste in households. In this project I fulfilled my role as a scrum master, but I also worked on the back-end of the project as a developer. I also helped my team by writing a part of the final report. This project enhanced my competence in being able to share and disseminate information and knowledge with team members and clients. I also gained more experience in evaluating other people’s work.",
+    description:"In the subject IDATT2106 I contributed to a group-based agile project that needed to be completed within three weeks, with scrum as the applied project management framework. My group consisted of 7 students, and the purpose was to create a full-stack application that may decrease food waste in households. In this project I fulfilled my role as a scrum master, but I also worked on the back-end of the project as a developer. Therefore, I contributed to sprint ceremonies. I also helped my team by writing a part of the final report. This project enhanced my competence in being able to share and disseminate information and knowledge with team members and clients. I also gained more experience in evaluating other people’s work.",
     repo:""
     
 
@@ -52,7 +53,7 @@ export default function MainPage (){
     title:"Calculator",
     images:['Calculator1.png','Calculator2.png','Calculator3.png'],
     icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>],
-    description:"",
+    description:"As a part of the subject IDATT2105 I developed a full-stack application for a calculator. This involved creating both the front-end and back-end for the application. This project has improved my ability to be able to acquire new knowledge in a continuously evolving field.",
     repo:"https://github.com/karofmah/IDATT2105-Full-Stack-Application-Development"
 
 
@@ -70,14 +71,14 @@ export default function MainPage (){
     title:"War Games",
     images:['WG1.png','WG2.png','WG3.png'],
     icons:[<FaJava className={iconDimensions}/>, <FaCss3Alt className={iconDimensions}/>],
-    description:"",
+    description:"In the project IDATT2001 I created an application that could simulate a battle between two armies. My tasks included writing the code for back-end, as well as providing a front-end for the user, which was done with JavaFX and CSS. This project enhanced my skills in regard to being able to apply object-oriented thinking to analyze and solve problems, and being able to apply elements from functional programming.",
     repo:"https://github.com/karofmah/War-Games"
   }
   const objectPF={
     title:"E-portfolio",
     images:['PF1.png','PF2.png','PF3.png'],
-    icons:[<FaReact className={iconDimensions}/>, <SiTypescript className={iconDimensions}/>,<SiMui className={iconDimensions}/>,<SiTailwindcss className={iconDimensions}/>,<SiVercel className={iconDimensions}/>],
-    description:"",
+    icons:[ <TbBrandNextjs className={iconDimensions}/>, <SiTypescript className={iconDimensions}/>,<SiMui className={iconDimensions}/>,<SiTailwindcss className={iconDimensions}/>,<SiVercel className={iconDimensions}/>],
+    description:"I developed this e-portfolio because of my interest within technology. Since my experience mainly was connected to back-end development, I wanted to enhance my knowledge and skills in front-end development and UI-design.",
     repo:"https://github.com/karofmah/my-eportfolio"
 
 
