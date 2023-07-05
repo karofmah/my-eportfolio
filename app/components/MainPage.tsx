@@ -101,9 +101,7 @@ export default function MainPage (){
 
   return(
     <div className='flex bg-slate-200'> 
-    <div className='sticky top-0 h-screen w-4/5'
-    
-    >
+    <div className='sticky top-0 h-screen w-4/5'>
       <SideBar 
       tabRefs={refs}
       valueY={scrollTop}

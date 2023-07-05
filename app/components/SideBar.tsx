@@ -45,7 +45,7 @@ export default function SideBar(props:any) {
   return (
     
       <Tabs
-        className="mt-12 br-1 "
+        className="br-1 pt-7"
         orientation="vertical"
         value={value}
         onChange={handleChange}
