@@ -3,8 +3,7 @@ import {useState,useEffect, useRef} from 'react'
 import Typography from '@mui/material/Typography';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import {GoRepo} from 'react-icons/go';
-import 'hover.css/css/hover-min.css';
-
+import { FaUserAlt, FaUsers } from "react-icons/fa";
 
 export default function Project(props:any){
   const [image,setImage]=useState<number>(0)
@@ -44,10 +43,22 @@ export default function Project(props:any){
       onMouseLeave={() => setIsHovered(false)}
       >  
       <div className="flex lg:self-auto self-center">
-      <h3 className='m-4 text-xl xl:text-2xl 2xl:text-3xl'> {props.object.title} </h3>
+      <h3 className='m-4 lg:ml-4 lg:my-4 text-xl xl:text-2xl 2xl:text-3xl'> {props.object.title} </h3>
+      {((window.innerWidth > 1024 && !isHovered) || (window.innerWidth < 1024)) && (
+  props.isGroup ? (
+    <FaUsers className="w-8 h-8 mt-4 mr-5" />
+  
+  ) : (
+    <a href={props.object.repo}>
+      <FaUserAlt className="w-6 h-6 mt-5 mr-5" />
+    </a>
+  )
+)}
+
+
       {((window.innerWidth>1024 && isHovered) || (window.innerWidth<1024)) && 
       <a href={props.object.repo}>
-        <GoRepo className={`w-7 h-7 mt-5 hvr-float-shadow`}/>
+        <GoRepo className={`w-7 h-7 mt-5 lg:ml-auto ml-3 hvr-float-shadow`}/>
         </a>}
       </div>
       {window.innerWidth<1024 && 

@@ -2,7 +2,6 @@ import Typography from "@mui/material/Typography";
 import {SiGithub, SiLinkedin} from 'react-icons/si';
 import {AiOutlineMail, AiOutlinePhone, AiOutlineFileText} from 'react-icons/ai';
 import {BiMap} from "react-icons/bi";
-import 'hover.css/css/hover.css';
 
 
 export default function About(props:any){ 
