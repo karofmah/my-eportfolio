@@ -28,9 +28,9 @@ export default function MainPage (){
   "As a mentor, my primary focus is on teaching mathematics at the primary, lower secondary, and upper secondary levels. My responsibilities include planning instructional sessions and tailoring the teaching approach to each individual student. Consequently, the instruction can vary from one student to another and depends on their proficiency in different topics. Additionally, monitoring the student's progress throughout the year is crucial in determining the trajectory of the instruction. This is something a mentor must observe and adjust accordingly.",
   "Through my experiences, I have learned that establishing a strong rapport with individuals is essential, as well as implementing a peer-to-peer approach. I have also acquired some effective communication methods that can be useful tools for teaching complex subjects to others. This not only applies to educational contexts but also in the context of project work."]
 
-  const objectCB={
+  const objectEC={
     title:"E-commerce",
-    images:['CB1.png','CB2.png','CB3.png','CB4.png','CB5.png','CB6.png','CB7.png'],
+    images:['EC1.png','EC2.png','EC3.png','EC4.png','EC5.png','EC6.png','EC7.png'],
     icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>],
     description:<>In the subject <a href="https://www.ntnu.no/studier/emner/IDATT2105/2022#tab=omEmnet" className="hvr-underline-reveal">IDATT2105</a> I took part in a volunteer project with three other students.  The goal was to develop a full stack application designed for e-commerce purposes in the span of a week. Mainly I worked on tasks related to the back-end of the application. The project has improved my ability to be able to acquire new knowledge in a continuously evolving field.</>,
     repo:"https://github.com/karofmah/E-Commerce-Project"
@@ -118,7 +118,7 @@ export default function MainPage (){
 
         <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8 " >Course projects</Typography>
         <Project
-          object={objectCB}
+          object={objectEC}
           height="lg:h-40 lg:hover:h-72"
           width="lg:w-80"
           isGroup={true}
