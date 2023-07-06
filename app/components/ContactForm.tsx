@@ -115,9 +115,6 @@ export default function ContactForm(props:any){
 
         </div>
       
-        
-
-
     </form>
 
     <Snackbar open={openSuccess} autoHideDuration={6000} onClose={handleCloseSuccess}>
@@ -133,9 +130,6 @@ export default function ContactForm(props:any){
     Message could not be sent
   </Alert>
 </Snackbar>
-
-
-
 
 
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 
-export default function ExperienceOne(props:any){
+export default function Experience(props:any){
 
     return(
       <div className="flex md:flex-row flex-col border-b w-11/12 border-white pb-5 mt-4 md:ml-8 ml-0">
