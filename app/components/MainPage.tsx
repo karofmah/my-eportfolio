@@ -131,7 +131,7 @@ export default function MainPage (){
      <Project
       
       object={objectTAS}
-      height="lg:h-48 lg:hover:h-4/5"
+      height="lg:h-48 xl:h-56 2xl:h-60 lg:hover:h-4/5"
       width="lg:w-80"
       isGroup={true}
       />  
