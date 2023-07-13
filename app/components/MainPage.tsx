@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Typography from '@mui/material/Typography';
 import About from './About'
-import Project from './Project';
+import MainProject from './MainProject';
 import '@fontsource/roboto/300.css'
 import Experience from './Experience'
 import 'hover.css/css/hover-min.css';
@@ -109,36 +109,36 @@ export default function MainPage (){
         <div ref={courseRef}>
 
         <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8 " >Course projects</Typography>
-        <Project
+        <MainProject
           object={objectEC}
-          height="lg:h-40 lg:hover:h-72"
+          height="lg:h-40 lg:hover:h-80"
           width="lg:w-80"
           isGroup={true}
         />
-        <Project
+        <MainProject
           object={objectSM}
-          height="lg:h-60 lg:hover:h-5/6"
-          width="lg:w-80"
+          height="lg:h-60 lg:hover:h-4/6 "
+          width="lg:w-80 lg:hover:w-3/5"
           isGroup={true}
         />
-       <Project
+       <MainProject
           object={objectCalculator}
-          height="lg:h-40 lg:hover:h-60"
+          height="lg:h-40 lg:hover:h-64"
           width="lg:w-80"
           isGroup={false}
       />
      
-     <Project
+     <MainProject
       
       object={objectTAS}
-      height="lg:h-48 xl:h-56 2xl:h-60 lg:hover:h-4/5"
-      width="lg:w-80"
+      height="lg:h-48 xl:h-56 2xl:h-60 lg:hover:h-4/6"
+      width="lg:w-80 lg:hover:w-3/5"
       isGroup={true}
       />  
 
-       <Project
+       <MainProject
       object={objectWG}
-      height="lg:h-40 lg:hover:h-80"
+      height="lg:h-40 lg:hover:h-3/5"
       width="lg:w-80"
       isGroup={false}
       />
@@ -149,10 +149,10 @@ export default function MainPage (){
 
       <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8" >My projects</Typography>
       
-      <Project
+      <MainProject
       object={objectPF}
-      height="lg:h-60 lg:hover:h-52"
-      width="lg:w-80"
+      height="lg:h-60 lg:hover:h-56"
+      width="lg:w-80 "
       isGroup={false}
       />
       </div>
