@@ -44,7 +44,7 @@ export default function Project(props:any){
         
          <Carousel
          
-         className="self-center w-11/12 w-full md:w-3/5"
+         className="self-center  w-full md:w-3/5"
          duration={1000} navButtonsAlwaysVisible={true} navButtonsProps={{
           style: {
             backgroundColor:"unset"
