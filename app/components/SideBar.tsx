@@ -28,15 +28,16 @@ export default function SideBar(props:any) {
 
   
   useEffect(() => {
+
     if(window.scrollY + window.innerHeight > document.documentElement.scrollHeight-1) {
       setValue(4)
-      } else if(refs[3].current!.getBoundingClientRect().top<=0){
+      } else if(refs[3].current!.getBoundingClientRect().top<=1){
         setValue(3)
-      } else if(refs[2].current!.getBoundingClientRect().top<=0){
+      } else if(refs[2].current!.getBoundingClientRect().top<=1){
         setValue(2)
-      } else if(refs[1].current!.getBoundingClientRect().top<=0){
+      } else if(refs[1].current!.getBoundingClientRect().top<=1){
         setValue(1)
-      } else if(refs[0].current!.getBoundingClientRect().top<=0){
+      } else if(refs[0].current!.getBoundingClientRect().top<=1){
         setValue(0)
       }
         
