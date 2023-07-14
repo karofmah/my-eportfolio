@@ -3,9 +3,10 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import {useEffect} from 'react'
 import {CgProfile} from "react-icons/cg"
-import {GrContact} from 'react-icons/gr'
 import {MdOutlineSchool, MdWork} from 'react-icons/md'
 import {AiOutlineProject} from 'react-icons/ai'
+import {BiMessageDots } from 'react-icons/bi'
+
 export default function SideBar(props:any) {
   
   var [value, setValue] = React.useState(0);
@@ -14,7 +15,7 @@ export default function SideBar(props:any) {
 
   var refs:any []=props.tabRefs
   
-  const tabStyle='hover:text-blue-500 mb-8 bg-gradient-to-t hover:from-slate-300 duration-200'
+  const tabStyle='hover:text-blue-500 mb-20 sm:mb-16 lg:mb-8 bg-gradient-to-t hover:from-slate-300 duration-200'
   const iconStyle='h-8 w-8 lg:h-6 lg:w-6'
 
     const handleTabClick = (ref:React.RefObject<HTMLDivElement>) => {
@@ -78,7 +79,7 @@ export default function SideBar(props:any) {
 
         <Tab label={innerWidth>=1024 ? "Contact me" : "" } className={tabStyle}
         onClick={()=>handleTabClick(refs[4])}
-        icon= {<GrContact className={iconStyle} /> }
+        icon= {<BiMessageDots className={iconStyle} /> }
         />
         
       </Tabs>
