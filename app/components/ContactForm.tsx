@@ -7,6 +7,7 @@ import Snackbar from '@mui/material/Snackbar';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
 import Box from '@mui/material/Box';
 import LinearProgress from '@mui/material/LinearProgress';
+
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
   props,
   ref,
@@ -22,6 +23,7 @@ export default function ContactForm(props:any){
     const [openError, setOpenError] = useState<boolean>(false);
     const [isSending, setIsSending] = useState<boolean>(false);
 
+    const textFieldStyle = "my-6 w-4/5 self-center"
 
     const handleCloseSuccess = (event?: React.SyntheticEvent | Event, reason?: string) => {
     
@@ -61,17 +63,16 @@ export default function ContactForm(props:any){
       });
   };
     return(
-      <div className="flex justify-center ">
+      <div className="flex justify-center">
 
-        <form ref={form} onSubmit={sendEmail} className="flex flex-col self-center md:w-2/5 w-4/5 bg-gradient-to-r from-slate-400 to-white rounded-t-xl mb-14 self-center">
-      <div className="flex flex-col">
+        <form ref={form} onSubmit={sendEmail} className="flex flex-col self-center md:w-2/5 w-4/5 bg-gradient-to-br from-slate-500 to-slate-200 rounded-xl mb-14 self-center">
+      <div className="flex flex-col ">
        
-      
       <TextField
         required
           id="outlined"
           label=""
-          className="shadow-white inset-shadow bg-gradient-to-r from-slate-400 to-white"
+          className={textFieldStyle}
           placeholder="Name"
           name="from_name"
           type='text'
@@ -82,8 +83,7 @@ export default function ContactForm(props:any){
           required
           id="outlined"
           label=""
-          className="bg-gradient-to-r from-slate-400 to-white"
-
+          className={textFieldStyle}
           placeholder="Email"
           name="from_email"
           type='email'
@@ -92,8 +92,7 @@ export default function ContactForm(props:any){
         </div>
       <TextField
           required
-            className="bg-gradient-to-r from-slate-400 to-white"
-
+          className={textFieldStyle}
           id="filled-textarea"
           label=""
           placeholder="Enter your message"
@@ -104,7 +103,7 @@ export default function ContactForm(props:any){
           
         />
         <div className="flex flex-col ">
-        <Button type="submit" value="Send"  variant="contained" endIcon={<SendIcon />}>
+        <Button className= "w-3/5 self-center my-4" type="submit" value="Send"  variant="contained" endIcon={<SendIcon />}>
           Send
           </Button>
           {isSending &&

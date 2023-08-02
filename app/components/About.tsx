@@ -65,7 +65,7 @@ export default function About(props:any){
           </ul>
       </div>
         </div>
-        <img src={props.imageURL} alt="Profile picture" className="opacity-80 hover:translate-x-1 hover:-translate-y-1 hover:shadow-2xl object-cover object-center max-w-md mx-8 mt-16 mr-16 rounded-full h-48 w-32 xs:h-32 sm:h-48 md:h-48 lg:h-3/5 lg:w-64 2xl:h-4/5 2xl:w-80 duration-200" />
+        <img src={props.imageURL} alt="Profile picture" className="opacity-80 hover:translate-x-1 hover:-translate-y-1 hover:shadow-2xl object-cover object-center max-w-md mx-8 mt-16 mr-16 rounded-full w-64 h-80 md:h-96 lg:h-3/5 2xl:h-4/5 duration-200" />
     </div>
      
     )

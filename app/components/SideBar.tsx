@@ -9,13 +9,11 @@ import {BiMessageDots } from 'react-icons/bi'
 
 export default function SideBar(props:any) {
   
-  var [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(0);
 
+  const refs:any []=props.tabRefs
   
-
-  var refs:any []=props.tabRefs
-  
-  const tabStyle='hover:text-blue-500 mb-20 sm:mb-16 lg:mb-8 bg-gradient-to-t hover:from-slate-300 duration-200'
+  const tabStyle='hover:text-blue-500 mb-20 sm:mb-16 lg:mb-8 bg-gradient-to-t duration-400 hover:from-slate-200 hover:via-blue-200 hover:to-slate-200 '
   const iconStyle='h-8 w-8 lg:h-6 lg:w-6'
 
     const handleTabClick = (ref:React.RefObject<HTMLDivElement>) => {
@@ -32,21 +30,23 @@ export default function SideBar(props:any) {
 
   
   useEffect(() => {
-
-    if(window.scrollY + window.innerHeight > document.documentElement.scrollHeight-1) {
-      setValue(4)
-      } else if(refs[3].current!.getBoundingClientRect().top<=2){
-        setValue(3)
-      } else if(refs[2].current!.getBoundingClientRect().top<=2){
-        setValue(2)
-      } else if(refs[1].current!.getBoundingClientRect().top<=2){
-        setValue(1)
-      } else if(refs[0].current!.getBoundingClientRect().top<=2){
-        setValue(0)
+    const interval = setInterval(() => {
+      if (window.scrollY + window.innerHeight > document.documentElement.scrollHeight - 15) {
+        setValue(4);
+      } else if (refs[3].current!.getBoundingClientRect().top <= 2) {
+        setValue(3);
+      } else if (refs[2].current!.getBoundingClientRect().top <= 2) {
+        setValue(2);
+      } else if (refs[1].current!.getBoundingClientRect().top <= 2) {
+        setValue(1);
+      } else if (refs[0].current!.getBoundingClientRect().top <= 2) {
+        setValue(0);
       }
-        
-  },[props.valueY])
-
+    }, 500);
+  
+    return () => clearInterval(interval);
+  }, [props.valueY]);
+  
   return (
     
       <Tabs

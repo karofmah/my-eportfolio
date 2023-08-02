@@ -52,17 +52,15 @@ export default function Project(props:any){
         }} swipe={true} NextIcon={<ArrowCircleRightIcon color="action" fontSize="large"/>} PrevIcon={<ArrowCircleLeftIcon color="action" fontSize="large"/>}
         >
   
-        
-                   {
-                     images.map( (image, i) => (
-                     
-                     <div className="bg-no-repeat bg-cover bg-center h-64 duration-200" style={{backgroundImage: `url(${image})`}} >
+          {
+            images.map( (image, i) => (
+            
+            <div className="bg-no-repeat bg-cover bg-center h-64 duration-200" style={{backgroundImage: `url(${image})`}} >
               
-              
-              </div>
-                     ))
-                   }
-                   </Carousel>
+            </div>
+            ))
+          }
+          </Carousel>
    
           }
        
