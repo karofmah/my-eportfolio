@@ -40,9 +40,9 @@ export default function SideBar(props:any) {
       } else if (refs[1].current!.getBoundingClientRect().top <= 2) {
         setValue(1);
       } else if (refs[0].current!.getBoundingClientRect().top <= 2) {
-        setValue(0);
+        setValue(0); 
       }
-    }, 500);
+    }, 200);
   
     return () => clearInterval(interval);
   }, [props.valueY]);
