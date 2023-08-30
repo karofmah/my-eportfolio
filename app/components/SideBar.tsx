@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import { Box } from '@mui/material';
 import {useEffect} from 'react'
 import {CgProfile} from "react-icons/cg"
 import {MdOutlineSchool, MdWork} from 'react-icons/md'
@@ -13,7 +14,7 @@ export default function SideBar(props:any) {
 
   const refs:any []=props.tabRefs
   
-  const tabStyle='hover:text-blue-500 mb-20 sm:mb-16 lg:mb-8 bg-gradient-to-t duration-400 hover:from-slate-200 hover:via-blue-200 hover:to-slate-200 '
+  const tabStyle='hover:text-blue-500 mb-8 bg-gradient-to-t duration-400 hover:from-slate-200 hover:via-blue-200 hover:to-slate-200 mb-24'
   const iconStyle='h-8 w-8 lg:h-6 lg:w-6'
 
     const handleTabClick = (ref:React.RefObject<HTMLDivElement>) => {
@@ -48,13 +49,19 @@ export default function SideBar(props:any) {
   }, [props.valueY]);
   
   return (
-    
+    <Box
+    className="h-screen"
+    display="flex"
+    alignItems="center"
+    justifyContent="center"
+    >
+
       <Tabs
-        className="br-1 pt-7"
+        className="br-1 pt-7 w-full h-full"
         orientation="vertical"
         value={value}
         onChange={handleChange}
-        centered
+        variant='scrollable'
       >
 
         <Tab label={innerWidth>=1024 ? "About me" : "" }  className={tabStyle} 
@@ -81,9 +88,11 @@ export default function SideBar(props:any) {
         onClick={()=>handleTabClick(refs[4])}
         icon= {<BiMessageDots className={iconStyle} /> }
         />
+       
         
       </Tabs>
     
+      </Box>
 
   );
 }

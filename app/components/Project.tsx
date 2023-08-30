@@ -55,7 +55,7 @@ export default function Project(props:any){
           {
             images.map( (image, i) => (
             
-            <div className="bg-no-repeat bg-cover bg-center h-64 duration-200" style={{backgroundImage: `url(${image})`}} >
+            <div key={i} className="bg-no-repeat bg-cover bg-center h-64 duration-200" style={{backgroundImage: `url(${image})`}} >
               
             </div>
             ))
