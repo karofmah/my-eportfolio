@@ -10,7 +10,7 @@ export default function MainProject(props:any){
     <>
 
     {innerWidth>=1024 ? 
-    <Carousel duration={1000} autoPlay={true} navButtonsAlwaysVisible={true} navButtonsProps={{
+    <Carousel duration={1000} autoPlay={false} navButtonsAlwaysVisible={true} navButtonsProps={{
       style: {
         backgroundColor:"unset"
     }
@@ -22,7 +22,7 @@ export default function MainProject(props:any){
     props.object.images.map( (image:string) => (
       <div key={image}>
       
-      <Project image={image} object={props.object}
+      <Project  image={image} object={props.object}
       height={props.height}
       width={props.width}
       isGroup={props.isGroup}/>

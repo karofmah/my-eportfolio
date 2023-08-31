@@ -111,19 +111,19 @@ export default function MainPage (){
         <Typography className="font-bold left-0 text-3xl font-bold lg:text-4xl 2xl:text-5xl my-4 ml-8 " >Course projects</Typography>
         <MainProject
           object={objectEC}
-          height="lg:h-40 lg:hover:h-80"
+          height="lg:h-40"
           width="lg:w-80"
           isGroup={true}
         />
         <MainProject
           object={objectSM}
-          height="lg:h-60 lg:hover:h-4/6 "
-          width="lg:w-80 lg:hover:w-3/5"
+          height="lg:h-60 "
+          width="lg:w-80"
           isGroup={true}
         />
        <MainProject
           object={objectCalculator}
-          height="lg:h-40 lg:hover:h-64"
+          height="lg:h-40"
           width="lg:w-80"
           isGroup={false}
       />
@@ -132,13 +132,13 @@ export default function MainPage (){
       
       object={objectTAS}
       height="lg:h-48 xl:h-56 2xl:h-60 lg:hover:h-4/6"
-      width="lg:w-80 lg:hover:w-3/5"
+      width="lg:w-80"
       isGroup={true}
       />  
 
        <MainProject
       object={objectWG}
-      height="lg:h-40 lg:hover:h-3/5"
+      height="lg:h-40"
       width="lg:w-80"
       isGroup={false}
       />
@@ -151,7 +151,7 @@ export default function MainPage (){
       
       <MainProject
       object={objectPF}
-      height="lg:h-60 lg:hover:h-56"
+      height="lg:h-60"
       width="lg:w-80 "
       isGroup={false}
       />
