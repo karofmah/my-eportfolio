@@ -14,7 +14,7 @@ export default function SideBar(props:any) {
 
   const refs:any []=props.tabRefs
   
-  const tabStyle='hover:text-blue-500 mb-8 bg-gradient-to-t duration-400 hover:from-slate-200 hover:via-blue-200 hover:to-slate-200 mb-24'
+  const tabStyle='hover:text-blue-500 bg-gradient-to-t duration-400 hover:from-slate-200 hover:via-blue-200 hover:to-slate-200 mb-24'
   const iconStyle='h-8 w-8 lg:h-6 lg:w-6'
 
     const handleTabClick = (ref:React.RefObject<HTMLDivElement>) => {
@@ -49,15 +49,10 @@ export default function SideBar(props:any) {
   }, [props.valueY]);
   
   return (
-    <Box
-    className="h-screen"
-    display="flex"
-    alignItems="center"
-    justifyContent="center"
-    >
+    
 
       <Tabs
-        className="br-1 pt-7 w-full h-full"
+        className="br-1 pt-7 h-screen"
         orientation="vertical"
         value={value}
         onChange={handleChange}
@@ -92,7 +87,6 @@ export default function SideBar(props:any) {
         
       </Tabs>
     
-      </Box>
-
+     
   );
 }
