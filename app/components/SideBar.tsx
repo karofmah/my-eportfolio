@@ -14,7 +14,7 @@ export default function SideBar(props:any) {
 
   const refs:any []=props.tabRefs
   
-  const tabStyle='hover:text-blue-500 bg-gradient-to-t duration-400 hover:from-slate-200 hover:via-blue-200 hover:to-slate-200 mb-24'
+  const tabStyle='hover:text-blue-500 bg-gradient-to-t duration-400 hover:from-slate-200 hover:via-blue-200 hover:to-slate-200 mb-24 place-self-center'
   const iconStyle='h-8 w-8 lg:h-6 lg:w-6'
 
     const handleTabClick = (ref:React.RefObject<HTMLDivElement>) => {

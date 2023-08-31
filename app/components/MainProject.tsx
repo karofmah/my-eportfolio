@@ -10,7 +10,7 @@ export default function MainProject(props:any){
     <>
 
     {innerWidth>=1024 ? 
-    <Carousel duration={1000} autoPlay={false} navButtonsAlwaysVisible={true} navButtonsProps={{
+    <Carousel duration={1000} autoPlay={true} navButtonsAlwaysVisible={true} navButtonsProps={{
       style: {
         backgroundColor:"unset"
     }
