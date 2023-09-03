@@ -25,6 +25,7 @@ export default function ContactForm(props:any){
 
     const textFieldStyle = "my-6 w-4/5 self-center"
 
+
     const handleCloseSuccess = (event?: React.SyntheticEvent | Event, reason?: string) => {
     
       if (reason === 'clickaway') {
@@ -48,10 +49,10 @@ export default function ContactForm(props:any){
     setIsSending(true)
     emailjs
     .sendForm(
-        'service_m0phs9o', 
-        'template_0pxrb0m', 
+        process.env.NEXT_PUBLIC_SERVICE_ID!, 
+        process.env.NEXT_PUBLIC_TEMPLATE_ID!, 
         form.current!, 
-        'wX_64WmWGLc7q9r6B')
+        process.env.NEXT_PUBLIC_API_KEY!)
       .then((result:any) => {
           setOpenSuccess(true);
           setIsSending(false)
