@@ -93,15 +93,15 @@ export default function MainPage (){
   }, []);
 
   return(
-    <div className='flex bg-slate-200'> 
-    <div className='sticky top-0 h-screen w-full'>
+    <div className='flex md:flex-row flex-col bg-slate-200'> 
+    <div className='sticky top-0 md:h-screen w-full sticky h-24 z-30 '>
       <SideBar 
       tabRefs={refs}
       valueY={scrollTop}
       />
     </div>
        
-      <div ref={aboutRef}  className='bg-slate-800 flex flex-col' >
+      <div ref={aboutRef}  className='bg-slate-800 flex flex-col ' >
         <About 
         description="My name is Karo Faraidoun Mahmoud and in this e-portfolio you will gain an overview of my competencies and experiences. Currently I am studying BSc in Computer Science at Norwegian University of Science and Technology (NTNU), where I have acquired knowledge and skills necessary to develop effective data systems with the users in focus. Through examples of work I have completed during my education, in the 'Course Projects' section, you will gain insight into how the competencies I have acquired align with an employment-related perspective. In addition, you may learn more about my personal projects in the 'My Projects' section. In the 'Work Experience' section, you will gain an understanding of the experiences I have obtained as a result of employment. If you have any inquiries or would like to discuss potential opportunities, I encourage you to reach out to me through the provided contact form. "
         imageURL="pb.png"

@@ -14,7 +14,7 @@ export default function SideBar(props:any) {
 
   const refs:any []=props.tabRefs
   
-  const tabStyle='hover:text-blue-500 bg-gradient-to-t duration-400 hover:from-slate-200 hover:via-blue-200 hover:to-slate-200 mb-24 place-self-center w-full'
+  const tabStyle='hover:text-blue-500 bg-gradient-to-t duration-400 hover:from-slate-200 hover:via-blue-200 hover:to-slate-200 mb-32 place-self-center w-24 md:w-full'
   const iconStyle='h-8 w-8 lg:h-6 lg:w-6'
 
     const handleTabClick = (ref:React.RefObject<HTMLDivElement>) => {
@@ -52,11 +52,12 @@ export default function SideBar(props:any) {
     
 
       <Tabs
-        className="br-1 pt-7 h-screen"
-        orientation="vertical"
+        className="br-1 pt-7 md:h-screen bg-slate-200 opacity-100 h-full z-30"
+        orientation={innerWidth < 768 ? "horizontal" : "vertical"}
         value={value}
         onChange={handleChange}
         variant='scrollable'
+        allowScrollButtonsMobile
       >
 
         <Tab label={innerWidth>=1024 ? "About me" : "" }  className={tabStyle} 
