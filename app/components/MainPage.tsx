@@ -42,7 +42,7 @@ export default function MainPage (){
     images:['SM1.png','SM2.png','SM3.png','SM4.png','SM5.png','SM6.png','SM7.png'],
     icons:[<FaVuejs className={iconDimensions}/>, <SiMysql className={iconDimensions}/>,<SiSpring className={iconDimensions}/>,<SiVuetify className={iconDimensions}/>],
     description:<>In the subject <a href='https://www.ntnu.no/studier/emner/IDATT2106/2022#tab=omEmnet' className="hvr-underline-reveal">IDATT2106</a> I contributed to a group-based agile project that needed to be completed within three weeks, with scrum as the applied project management framework. My group consisted of 7 students, and the purpose was to create a full-stack application that may decrease food waste in households. In this project I fulfilled my role as a scrum master, but I also worked on the back-end of the project as a developer. Therefore, I contributed to sprint ceremonies. I also helped my team by writing a part of the final report. This project enhanced my competence in being able to share and disseminate information and knowledge with team members and clients. I also gained more experience in evaluating other people’s work. </>,
-    repo:""
+    repo:"https://github.com/karofmah/SmartMat-Backend"
   }
   
  
@@ -64,7 +64,7 @@ export default function MainPage (){
 
   const objectWG={
     title:"War Games",
-    images:['WG1.png','WG2.png','WG3.png'],
+    images:['WG2.png','WG3.png','WG1.png'],
     icons:[<FaJava className={iconDimensions}/>, <FaCss3Alt className={iconDimensions}/>],
     description:<>In the project <a href="https://www.ntnu.no/studier/emner/IDATT2001/2021/1#tab=omEmnet" className="hvr-underline-reveal">IDATT2001</a> I created an application that could simulate a battle between two armies. My tasks included writing the code for back-end, as well as providing a front-end for the user, which was done with JavaFX and CSS. This project enhanced my skills in regard to being able to apply object-oriented thinking to analyze and solve problems, and to apply elements from functional programming.</>,
     repo:"https://github.com/karofmah/War-Games"
