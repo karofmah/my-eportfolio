@@ -17,7 +17,7 @@ export default function Project(props:any){
       return(
         <div>              
                    
-      <div className="h-1/2 lg:bg-no-repeat lg:bg-contain lg:bg-center lg:h-screen mt-16 lg:duration-500 " style={innerWidth>=1024 ? {backgroundImage: `url(${props.image})`} : {}}>
+      <div className="h-1/2 lg:bg-no-repeat lg:bg-cover lg:bg-center lg:h-screen mt-16 lg:duration-500 " style={innerWidth>=1024 ? {backgroundImage: `url(${props.image})`} : {}}>
    <div
         className={`flex flex-col lg:rounded-xl lg:absolute lg:right-0 lg:mr-16 lg:mt-12 bg-gradient-to-br from-blue-900 to-cyan-400 lg:overflow-hidden lg:opacity-95 lg:hover:h-fit lg:hover:w-3/5 duration-200 ${props.height} ${props.width} 
         `}
